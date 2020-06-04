@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+ <link href="static/styles.css" rel="stylesheet">
+      <title>question7.1 and 7.3</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <h1 style="font-size:50px;"> Neelam Makwana</h1>
+   <h1 style="font-size:50px;">1001453836</h1>
+        <br>
+<!--        <p>No. of rows: {{rowcount}}</p>-->
+<!--        <p>Time: {{elapsed_time}}</p>-->
+        <center>
+            {#{% if rows is not None %}#}
+<!--            {{rows}}  <br>-->
+   <table style="padding: 5px;text-align: left;">
+            <tr>
+
+                <th>VolcanoName</th>
+
+                <th>Latitude</th>
+                <th>Longitude</th>
+
+
+            </tr>
+            {% for rows in rows %}
+
+                    <td>
+                        {{rows['VolcanoName']}}
+                    </td>
+
+                    <td>
+                        {{rows['Latitude']}}
+                    </td>
+
+                    <td>
+                        {{rows['Longitude']}}
+                    </td>
+
+
+                </tr>
+
+            {% endfor %}
+        </table>
+            {#{% else %}#}
+            {#<div>No data available</div>#}
+            {#{% endif %}#}
+<!--            <a href="file:///Users/neelam/Desktop/q6/eb-flask/templates/index_m.html" target="_blank">update</a>-->
+        </center>
+        <br>
+        <br>
+
+<br>
+            <form action="/withinrange" method="post">
+<!--                <label>Magnitude: </label> <input type="number" name="range1" step="any"><br><br>-->
+                 <label>Number: </label> <input type="number" name="range1" step="any"><br><br>
+<!--                 <label>VolcanoName: </label> <input type="text" name="name" step="any"><br><br>-->
+                  <label>Updated VolcanoName: </label> <input type="text" name="name1" step="any"><br><br>
+                <input type="submit" value="submit" class="btn btn-secondary">
+            </form>
+            <br>
+
+        <br>
+
+    </div>
+</body>
+</html>

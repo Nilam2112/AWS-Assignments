@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+      <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+    <title>{% block title %}{% endblock %}  Home</title>
+
+    <script>
+    var x = 0;
+
+    document.getElementById('output-area').innerHTML = x;
+
+    function button1() {
+  document.getElementById('output-area').innerHTML = ++x;
+    }
+
+    function button2() {
+  document.getElementById('output-area').innerHTML = --x;
+    }
+
+
+    function reset() {
+      x = 0;
+      document.getElementById('output-area').innerHTML = x;
+    }
+
+    function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+            }
+
+             var sec = 0;
+            function pad ( val ) { return val > 9 ? val : "0" + val; }
+                 setInterval( function(){
+                 document.getElementById("seconds").innerHTML=pad(++sec%60);
+                 document.getElementById("minutes").innerHTML=pad(parseInt(sec/60,10));
+                 }, 1000);
+
+    </script>
+
+
+
+    {% endblock %}
+</head>
+<body align="center" style="text-align: center;" onload="startTime()">
+<header>
+<b>
+     <h1 style="font-size:50px;"> Neelam Makwana</h1>
+   <h1 style="font-size:50px;">1001453836</h1>
+
+</b>
+</header>
+
+<!-- <h1>Time: {{elapsed_time}}</h1>-->
+<p>
+{% block content %}
+<div id="txt" style="font-size:50px;"></div>
+
+<input type=button value="increment" onclick="button1()" class="btn btn-secondary" /><br><br>
+<input type=button value="decrement" onclick="button2()"class="btn btn-secondary" /><br><br>
+<span id="output-area"></span>
+
+{% endblock %}<br>
+    <br>
+<button onclick="reset()">Reset</button>
+
+</body>
+</html>

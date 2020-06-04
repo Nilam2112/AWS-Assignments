@@ -1,0 +1,120 @@
+<html > <head>
+         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+
+        <title>Home</title>
+    </head><body style="text-align: center;">
+ <h1>1001453836</h1>
+ <h1>Neelam Makwana</h1>
+            <br>
+
+            <h3>Amazon Web Services</h3>
+            <br>
+            <br>
+
+<h4><p id="demo">Wed Apr 22 2020 18:08:23 GMT-0500 (Central Daylight Time)</p></h4>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+<div class="container">
+
+  <h4><div id="counter">100</div></h4>
+  <button onclick="reset()" class="btn btn-danger">Reset</button>
+  <script language="JavaScript">
+    let counter = document.getElementById('counter');
+    let count = -1
+
+    var count_event = setInterval(Counter, 300);
+
+    function reset() {
+      count = 0;
+    }
+
+    function Counter() {
+      count += 1;
+      counter.innerHTML = count.toString();
+    }
+  </script>
+
+    </div>
+
+
+    <div id="static_clock">
+               <h4> Request Counts <span id="counter_2"></span></h4>
+            </div>
+            <script>
+            	
+            	 $.get("http://xyz.us-east-2.elasticbeanstalk.com/quiz6", function(data){
+                console.log(data);
+                $("#counter_2").text(data);
+            });
+
+            </script>
+</body></html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+        <script>
+            function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+            }
+
+             var sec = 0;
+            function pad ( val ) { return val > 9 ? val : "0" + val; }
+                 setInterval( function(){
+                 document.getElementById("seconds").innerHTML=pad(++sec%60);
+                 document.getElementById("minutes").innerHTML=pad(parseInt(sec/60,10));
+                 }, 1000);
+
+            </script>
+
+        <title>Home</title>
+           <p style="text-align:center">1001453836</p>
+            <p style="text-align:center">Neelam Makwana</p>
+    </head>
+    <body style="text-align:center"  onload="startTime()">
+            <div id="txt" style="font-size:20px;"></div>
+
+
+
+        <div class="container">
+
+
+               <form action="/QuizPractise01" method="post">
+
+<br>
+<!--                <br>-->
+<!--                <input type="submit" value="Quiestion01" >-->
+<!--                     <br>-->
+            </form>
+
+            COUNT :
+            <span id="seconds"></span>
+
+            <input type="submit" value="RESET" >
+        </div> -->
+    </body>
+</html>

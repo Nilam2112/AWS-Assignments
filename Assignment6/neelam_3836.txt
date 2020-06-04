@@ -1,0 +1,277 @@
+
+Name:neelam  Makwana
+Last 4 digits ID:
+Computer IP address:
+CSE 6331, Cloud Computing					
+
+
+Quiz May 4, Spring 2020   (c) DL, UTA, 2020
+
+
+  C&P means cut and paste only those relevant lines from your program(s) into this quiz.
+
+
+ 1.  I understand that I am on my honor during this quiz, I will not collaborate, use 
+     non-allowed sources, and I will not discuss or share this quiz with anyone for the next 
+     4 hours.
+     You MAY: use Google to search, use previous source code, 
+     YOU MAY NOT use:
+     Email, Facebook, Hangouts, IM, chats, Skype or ANY other human connection.
+
+     This is a timed test. Late tests will have points deducted for being late.
+     Very late tests will not be graded.
+
+     The second part of the test, you should electronically submit, you will need to copy and paste 
+     only those lines of code to implement that part of the test, usually a few (two to eight) lines of code. 
+     Place it immediately after the question.
+
+     Submit this Quiz (renamed) with code cut and pasted, ONLY text. DO NOT submit zips, binaries, libraries,
+     or anything other than text.
+
+     When any parts(questions) are complete complete, submit this test, you may make multiple submissions.
+
+ 2. Get files from this same folder.
+   
+ 3. Name your program/submission with your name and last digits of your ID.
+
+ 4. Using the cloud services provider, all functionality possible should be implemented on that provider.
+    (Of course, displaying web pages through a browser and the user interface is "local")
+
+ 5. Show a web page and interface (which resides on the cloud provider) with your full name and 
+    student ID in large font at the top of every web page dispayed (for this quiz)
+    The cloud service provider is AWS (Amazon Web Services).
+
+Show and submit code:
+
+ 5. Please read part 5. above, again.
+    Note: Due to (rather obvious) conditions, anything you have running "locally", we can not see.
+    If you do wish to submit anything that ONLY runs locally, please append your code after the question
+    below, (same as for clod implementation code). 
+    If appropriate, you are welcome to submit "screen shots", if they are in a "MS Word", (or compatible) format,
+    or PDF. We can not read other formats.
+
+ 6. On the cloud provider you will "host" two web pages, one called "Set", the other called "Display". 
+    The Set page will allow a user to set a start value (for example 0 or 1000000) and an Increment and a Decrement
+    button (or check box or similar) where only Increment OR Decrement may be selected. 
+    On the Display page, in either a different browser or a different tab, (perhaps on a different computer), 
+    you will show the start value counting up (increment) or down (decrement). 
+    Please also show time of day (in hours, minutes and seconds) in a large font at the top of the screen 
+    (as well as your name and student ID)
+    Also on the Display page, show a "reset" button (on that web page) where we can reset the counter value 
+    to zero ("0") (put anywhere on the page).
+    Please DO NOT combine these two web pages into one, you may have links that go from one page to the other, 
+    or if you wish have a third page that links to these two (Set and Display).
+
+Ans:<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+      <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+    <title>{% block title %}{% endblock %}  Home</title>
+
+    <script>
+    var y = 0;
+
+    document.getElementById('output-area').innerHTML = y;
+
+    function button1() {
+  document.getElementById('output-area').innerHTML = ++y;
+    }
+
+    function button2() {
+  document.getElementById('output-area').innerHTML = --y;
+    }
+    </script>
+
+
+
+    {% endblock %}
+</head>
+<body align="center">
+<header>
+<b>
+   <h1>1001453836</h1>
+            <h1>Neelam Makwana</h1>
+</b>
+</header>
+
+
+<p>
+{% block content %}
+
+<input type=button value="increment" onclick="button1()" class="btn btn-secondary" />
+<input type=button value="decrement" onclick="button2()"class="btn btn-secondary" />
+<span id="output-area"></span>
+
+{% endblock %}
+
+</body>
+</html>
+
+@application.route("/")
+def home():
+    global count
+    count = count + 1
+    pagetime = datetime.datetime.now()
+    # return render_template('home.html', count=count, pagetime=pagetime)
+    return render_template('setpage.html')
+
+ 7. Please import the data from the file "v.csv" into a relational table/data base. Then you will create a web
+    interface to allow someone to enter either (you will implement both, a user will chose option 1 or 2): 
+    1. a "Number" (the first column, a volcano number) and you will show the Volcano Name, Latitude and Longitude
+       for that number (if one exists), and allow a user to modify (change) the Volcano Name
+    or
+    2. A "bounding box" ("upper left hand", or corner, Latitude and Longitude, then opposite corner "lower right hand",
+       Latitude and Longitude) (that is a pair of (Latitude, Longitude) values, such as ((1, 10), (100, 120)), and you will 
+       display Number, Country, Latitude and Longitude for all volcanos within that area (bounding box).
+    3. Similar to part 6, we would like to have two browser tabs open so that we may modify a value in part 1, on one tab,
+       then see it change (when refreshed, or better, automatically) on the other tab.
+
+
+
+i have used sqlworkbench and RDS server for database connectivity and for uploding a v.csv file. In "database_screenshot" i have attached screenshots.
+
+CREATE TABLE `quiz`.`Volcano` (
+  Num INT NOT NULL,
+  VolcanoName VARCHAR(255) NULL, 
+  Country VARCHAR(255) NULL, 
+  Region VARCHAR(255) NULL, 
+  Latitude FLOAT(50) NULL, 
+  Longitude FLOAT(50) NULL,
+  Elev INT NOT NULL);
+
+cd /usr/local/mysql
+mysql -h flasktest.xyz.us-east-2.rds.amazonaws.com -u flask -p
+
+Below command i have used for loading a csv data into Volcano table
+
+LOAD DATA LOCAL INFILE '/Users/neelam/Desktop/v.csv' INTO TABLE quiz.Volcano FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES;
+Ans1:   <br>
+            <h4>
+                update
+            </h4> <br>
+            <form action="/greaterthan" method="post">
+<!--                <label>Magnitude: </label> <input type="number" name="range1" step="any"><br><br>-->
+                 <label>Number: </label> <input type="number" name="range1" step="any"><br><br>
+<!--                 <label>VolcanoName: </label> <input type="text" name="name" step="any"><br><br>-->
+<!--                  <label>Updated VolcanoNumber: </label> <input type="text" name="name1" step="any"><br><br>-->
+                <input type="submit" value="Search" class="btn btn-secondary">
+            </form>
+            <br>
+
+@application.route("/greaterthan", methods=["POST", "GET"])
+def greaterthan():
+    # range1 = float(request.form['range1'])
+    range1 = int(request.form['range1'])
+    # name = str(request.form['name'])
+    # name1 = str(request.form['name1'])
+
+    start_time = time.time()
+
+    sql1 = "SELECT * FROM quiz.Volcano WHERE mag > '" + str(range1) + "'"
+    sql1 = "SELECT VolcanoName,Latitude,Longitude FROM quiz.Volcano WHERE  Num ='" + str(range1) + "'"
+
+
+    cursor.execute(sql1)
+    rows1 = cursor.fetchall()
+
+    # sql2 = "SELECT * FROM quiz.stco"
+     sql2 = "UPDATE quiz.Volcano SET VolcanoName = '" + str(name) + "'  WHERE Num ='" + str(range1) + "'"
+    # cursor.execute(sql1)
+     cursor.execute(sql2)
+    rows2 = cursor.fetchall()
+
+    end_time = time.time()
+    elapsed_time = end_time-start_time
+
+    return render_template("greaterthan.html", rows=rows1,rows=rows2,elapsed_time=elapsed_time)
+
+
+<table style="padding: 5px;text-align: left;">
+            <tr>
+
+                <th>VolcanoName</th>
+
+                <th>Latitude</th>
+                <th>Longitude</th>
+
+
+            </tr>
+            {% for rows in rows %}
+
+                    <td>
+                        {{rows['VolcanoName']}}
+                    </td>
+
+                    <td>
+                        {{rows['Latitude']}}
+                    </td>
+
+                    <td>
+                        {{rows['Longitude']}}
+                    </td>
+
+
+                </tr>
+
+            {% endfor %}
+        </table>
+
+Ans2: <br>
+            <h4>
+                 Update
+            </h4> <br>
+            <form action="/update" method="post">
+                <label> number </label><br>
+                <label>Range1: </label> <input type="number" name="range1" step="any"><br>
+                <label>Range2: </label> <input type="number" name="range2" step="any"> <br>
+                 <label>Range3: </label> <input type="number" name="range3" step="any"><br>
+                <label>Range4: </label> <input type="number" name="range4" step="any"> <br>
+<!--                <label>Start Date: </label> <input type="text" name="startdate"><br>-->
+<!--                <label>End Date: </label> <input type="text" name="enddate"> <br>-->
+<!--                <label>Magnitude: </label> <input type="number" name="mag" step="any"> <br>-->
+<!--                 <label>Number: </label> <input type="number" name="num" step="any"> <br>-->
+                <input type="submit" value="search" class="btn btn-secondary">
+            </form>
+<!--            <br>-->
+
+@application.route("/update", methods=["POST", "GET"])
+def update():
+    range1 = float(request.form['range1'])
+    range2 = float(request.form['range2'])
+    range3 = float(request.form['range3'])
+    range4 = float(request.form['range4'])
+    # startdate = (request.form['startdate'])
+    # enddate = (request.form['enddate'])
+    # mag = float(request.form['mag'])
+    # num = int(request.form['mag'])
+
+    start_time = time.time()
+
+    # sql1 = "UPDATE quiz.quake SET mag = '" + str(mag) + "'  WHERE depth BETWEEN '" + str(range1) + "' AND '" + str(range2) + "' AND time BETWEEN '" + str(startdate) + "%' AND '" + str(enddate) + "%'"
+    sql1 = "SELECT * FROM quiz.Volcano  WHERE Latitude BETWEEN '" + str(range1) + "' AND '" + str(range2) + "' AND Longitude BETWEEN '" + str(range3) + "' AND '" + str(range4) + "'"
+    cursor.execute(sql1)
+    rows1 = cursor.fetchall()
+    # sql2 = "SELECT * FROM dbo.quakes WHERE depth between '" + str(range1) + "' AND '" + str(range2) + "' AND GMTTIME BETWEEN '" + str(startdate) + "%' AND '" + str(enddate) + "%'"
+    # cursor.execute(sql2)
+    # rows2 = cursor.fetchall()
+
+    end_time = time.time()
+    elapsed_time = end_time-start_time
+
+    # return render_template("update.html", elapsed_time=elapsed_time)
+    return render_template("withinrange.html", rows=rows1, elapsed_time=elapsed_time)
+    # return render_template("update.html", rows=rows2, rowcount=len(rows2), elapsed_time=elapsed_time)
+
+
+
+ 8.  When you are finished with any part, please submit a link (a link to your AWS app) 
+     to Teams, and we will try to demo it, then when you are FINISHED 
+     (or at the end of the class) please submit code to Teams, and terminate your app.
+
+ Good Luck!   
+

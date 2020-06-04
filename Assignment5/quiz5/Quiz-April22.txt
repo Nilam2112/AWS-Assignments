@@ -1,0 +1,124 @@
+
+Name: neelam bhimjibhai Makwana
+Last 4 digits ID: 3836
+Computer IP address:192.168.1.148
+CSE 6331, Cloud Computing					
+
+
+Quiz April 22, Spring 2020   (c) DL, UTA, 2020
+
+
+  C&P means cut and paste only those relevant lines from your program(s) into this quiz.
+
+
+ 1.  I understand that I am on my honor during this quiz, I will not collaborate, use 
+     non-allowed sources, and I will not discuss or share this quiz with anyone for the next 
+     4 hours.
+     You MAY: use Google to search, use previous source code, 
+     YOU MAY NOT use:
+     Email, Facebook, Hangouts, IM, chats, Skype or ANY other human connection.
+
+     This is a timed test. Late tests will have points deducted for being late.
+     Very late tests will not be graded.
+
+     The second part of the test, you should electronically submit, you will need to copy and paste 
+     only those lines of code to implement that part of the test, usually a few (two to eight) lines of code. 
+     Place it immediately after the question.
+
+     Submit this Quiz (renamed) with code cut and pasted, ONLY text. DO NOT submit zips, binaries, libraries,
+     or anything other than text.
+
+     When any parts(questions) are complete complete, submit this test, you may make multiple submissions.
+
+ 2. Get files from this same folder.
+   
+ 3. Name your program/submission with your name and last digits of your ID.
+
+ 4. Using the cloud services provider, all functionality possible should be implemented on that provider.
+    (Of course, displaying web pages through a browser and the user interface is "local")
+
+ 5. Show a web page and interface (which resides on the cloud provider) with your name and 
+    student ID in large font at the top of every web page dispayed (for this quiz)
+    The cloud service provider is AWS (Amazon Web Services).
+
+Show and submit code:
+
+ 5. Please read part 5. above, again.
+    Note: Due to (rather obvious) conditions, anything you have running "locally", we can not see.
+    If you do wish to submit anything that ONLY runs locally, please append your code after the question
+    below, (same as for clod implementation code). 
+    If appropriate, you are welcome to submit "screen shots", if they are in a "MS Word", (or compatible) format,
+    or PDF. We can not read other formats.
+
+ 6. On the cloud provider, please show a web page that has a very simple interface: 
+     1. A counter (that displays 0 then 1 then 2, etc) at a rate between 1 and 5 increments per second 
+       (that is, your counter should count no slower than once per second, no faster than 5 times per second,
+       there are many ways to implement this, we just want to see it "count", it doesn't need to be time precise)
+       Please display this count in the bottom half of the screen in large font.
+     2. The time of day (in hours, minutes and seconds) in a large font at the top of the screen 
+        (as well as your name and student ID)
+     3. A "reset" button (on that web page) where we can reset the count to zero ("0")
+        (put anywhere on the page).
+
+@application.route('/')
+def index():
+    start = datetime.datetime.now()
+    b = start.second
+    if (b % 2) == 0:
+        return render_template('index_m.html', dt=str(start))
+    else:
+        return render_template('index1_m.html', dt=str(start))
+    return render_template("index_m.html", dt=str(start))
+
+<body align="center">
+<header>
+<center><b>
+Neelam Makwana<br/>
+1001453836
+<br/><br/>
+counter
+</b></center>
+</header>
+<p>2</p>
+<!--<img src="https://mybucket21121.s3.us-east-2.amazonaws.com/a.jpg" height="100" width="100"/>-->
+<br/>
+<br/>
+{{dt}}
+</body>
+
+<body align="center">
+<header>
+<center><b>
+Neelam Makwana<br/>
+1001453836
+<br/><br/>
+counter
+</b></center>
+</header>
+<p>1</p>
+<!--<img src="https://mybucket21121.s3.us-east-2.amazonaws.com/b.jpg" height="100" width="100"/>-->
+<br/>
+<br/>
+{{dt}}
+</body>
+
+ 7. Modify part 6 (above) to only increment the count when that page is "requested" by an external (user-like)
+    request. Those requests will come from your (local) computer from a "load-testing" application 
+    which is "testing" your cloud application.
+    Please enter the name of your load-testing application here:jmeter
+
+    
+    We will ask you to set some parameters (such as 2 requests per second, or change to more requests or fewer),
+    and we will watch your web page respond.
+
+ 8.  Bonus:
+     Show that you can scale the number of instances on the cloud provider to a maximum of 3, based on "load"
+     of your application. (This will require both screen shots of your cloud provider settings/implementation 
+     and showing us.)
+
+ 9.  When you are finished with any part, please submit a link (a link to your AWS app) 
+     to Teams, and we will try to demo it, then when you are FINISHED 
+     (or at the end of the class) please submit code to Teams, and terminate your app.
+
+ Good Luck!   
+

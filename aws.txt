@@ -1,0 +1,131 @@
+jmeter links
+
+http://jmeter.apache.org/download_jmeter.cgi
+
+https://devqa.io/perf/install-jmeter-extra-plugins-mac-os-using-homebrew
+
+https://www.ubik-ingenierie.com/blog/using-homebrew-to-install-and-configure-jmeter-under-mac-osx/
+
+https://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
+
+https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80
+
+pip3 install virtualenv
+
+Access Key ID:
+#removed for security reason
+
+Secret Access Key:
+#removed for security reason
+
+mkdir eb-flask
+ cd eb-flask
+ virtualenv virt
+ source virt/bin/activate
+pip install flask==1.0.2
+pip freeze
+
+brew update
+brew uninstall awsebcli
+eb --version
+
+Aws access key
+https://tntdrive.com/where-do-i-get-my-access-keys.aspx
+
+Install the EB CLI on macOS
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-osx.html
+
+Configure the EB CLI
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-configuration.html
+
+making database
+https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80
+
+Deploying a flask application to Elastic Beanstalk
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
+
+
+deploying steps
+eb init -p python-3.6 flask-tutorial --region us-east-2
+eb init -i
+eb init
+Do you want to set up SSH for your instances?
+(y/n): y
+enter empty
+eb create flask-env
+eb open
+eb terminate flask-env
+
+mysql pass: #removed for security reason
+
+
+cd /usr/local/mysql
+mysql -h hostname -u username -p
+mysql -h flasktest.xyz.us-east-2.rds.amazonaws.com -u flask -p
+LOAD DATA LOCAL INFILE '/Users/neelam/Desktop/population.csv' INTO TABLE quiz.population FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES;
+SHOW databases;
+
+time VARCHAR(255) NULL, 
+latitude FLOAT(50) NULL, 
+longitude FLOAT(30) NULL,
+depth FLOAT(10) NULL,
+mag FLOAT(10) NULL, 
+magType VARCHAR(50), 
+nst FLOAT(10) NULL, 
+gap FLOAT(10) NULL, 
+dmin FLOAT(20) NULL, 
+rms FLOAT(20) NULL, 
+net VARCHAR(10) NULL, 
+id VARCHAR(25) NULL, 
+updated VARCHAR(50), 
+place VARCHAR(73) NULL,
+ type VARCHAR(50), 
+horizontalError FLOAT(20) NULL,
+depthError FLOAT(20), 
+magError FLOAT(20), 
+magNst FLOAT(20) NULL,
+Status VARCHAR(50), 
+locationSource VARCHAR(4) NULL,
+magSource VARCHAR(50)  
+
+LOAD DATA LOCAL INFILE '/Users/neelam/Desktop/quake.csv' INTO TABLE AwsQuiz.quake FIELDS TERMINATED by ',' LINES TERMINATED BY '\n';
+
+jmeter
+Test Plan
+add threads group
+change number of threads: 20
+ramp up-period seound: 2
+loop count:1
+
+then go to "thread group": add->sampler->add HTTP Resquest
+in "http request" in "basic" add path: http://flask-env1.xyz.us-east-2.elasticbeanstalk.com/
+
+then go to  "http request" in "advanced" client implementation: Http request4 select
+
+then go to "thread group" ->add ->listener -> view results in table
+
+LOAD DATA LOCAL INFILE '/Users/neelam/Desktop/students.csv' INTO TABLE quiz.students FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE '/Users/neelam/Desktop/Fall2019.csv' INTO TABLE quiz.Fall2019 FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES;
+
+ i have used sqlworkbench and RDS server for database connectivity and for uploding a v.csv file. In "database_screenshot" i have attached screenshots.
+
+CREATE TABLE `quiz`.`Volcano` (
+  Num INT NOT NULL,
+  VolcanoName VARCHAR(255) NULL, 
+  Country VARCHAR(255) NULL, 
+  Region VARCHAR(255) NULL, 
+  Latitude FLOAT(50) NULL, 
+  Longitude FLOAT(50) NULL,
+  Elev INT NOT NULL);
+
+cd /usr/local/mysql
+mysql -h flasktest.xyz.us-east-2.rds.amazonaws.com -u flask -p
+
+Below command i have used for loading a csv data into Volcano table
+
+LOAD DATA LOCAL INFILE '/Users/neelam/Desktop/v.csv' INTO TABLE quiz.Volcano FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES;
+
+

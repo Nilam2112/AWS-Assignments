@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="defc2faa-c2ed-4473-b3ed-b3e0e8e06447" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - jdbc:mysql://gomi.ce8ezamrlvci.us-east-2.rds.amazonaws.com :3306" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - jdbc:mysql://gomi.ce8ezamrlvci.us-east-2.rds.amazonaws.com :3306" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - jdbc:mysql://gomi.ce8ezamrlvci.us-east-2.rds.amazonaws.com :3306" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbo: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - jdbc:mysql://gomi.ce8ezamrlvci.us-east-2.rds.amazonaws.com :3306" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbo: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="course: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - jdbc:mysql://gomi.ce8ezamrlvci.us-east-2.rds.amazonaws.com :3306" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbo: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="stco: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - jdbc:mysql://gomi.ce8ezamrlvci.us-east-2.rds.amazonaws.com :3306" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbo: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="student: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>application</find>
+      <find>username</find>
+      <find>say_hello</find>
+      <find>centroid</find>
+      <find>list</find>
+      <find>i</find>
+      <find>ylist</find>
+      <find>cluster_num</find>
+      <find>predict</find>
+      <find>cluster_centers_</find>
+      <find>euc</find>
+      <find>1105</find>
+      <find>courseid1</find>
+      <find>maxse</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/aws-elastic-beanstalk-cli-setup" />
+  </component>
+  <component name="ProjectId" id="1bHZgC5IfMihsNNxcRmZtscb5TD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.application">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="asg5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="asg5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="application" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="asg5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eb-flask" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eb-flask/application.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="serving" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="asg5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/werkzeug" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/werkzeug/serving.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.application" />
+      <item itemvalue="Python.serving" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.application" />
+        <item itemvalue="Python.serving" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="defc2faa-c2ed-4473-b3ed-b3e0e8e06447" name="Default Changelist" comment="" />
+      <created>1561243874255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561243874255</updated>
+      <workItem from="1561243877128" duration="1299000" />
+      <workItem from="1561251505293" duration="650000" />
+      <workItem from="1561337730416" duration="21573000" />
+      <workItem from="1561444975805" duration="38475000" />
+      <workItem from="1561592159958" duration="27361000" />
+      <workItem from="1561946341353" duration="18520000" />
+      <workItem from="1562173424052" duration="4206000" />
+      <workItem from="1562177676170" duration="750000" />
+      <workItem from="1562178445720" duration="2435000" />
+      <workItem from="1562180911598" duration="12229000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="127498000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="165" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588291142364">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="165" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.839@0.23.1440.839" timestamp="1588291142364" />
+    <state width="1334" height="270" key="GridCell.Tab.0.bottom" timestamp="1588367642270">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.0.bottom/0.23.1440.839@0.23.1440.839" timestamp="1588367642270" />
+    <state width="1334" height="270" key="GridCell.Tab.0.center" timestamp="1588367642269">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.0.center/0.23.1440.839@0.23.1440.839" timestamp="1588367642269" />
+    <state width="1334" height="270" key="GridCell.Tab.0.left" timestamp="1588367642268">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.0.left/0.23.1440.839@0.23.1440.839" timestamp="1588367642268" />
+    <state width="1334" height="270" key="GridCell.Tab.0.right" timestamp="1588367642269">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.0.right/0.23.1440.839@0.23.1440.839" timestamp="1588367642269" />
+    <state width="1334" height="270" key="GridCell.Tab.1.bottom" timestamp="1588367642272">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.1.bottom/0.23.1440.839@0.23.1440.839" timestamp="1588367642272" />
+    <state width="1334" height="270" key="GridCell.Tab.1.center" timestamp="1588367642271">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.1.center/0.23.1440.839@0.23.1440.839" timestamp="1588367642271" />
+    <state width="1334" height="270" key="GridCell.Tab.1.left" timestamp="1588367642271">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.1.left/0.23.1440.839@0.23.1440.839" timestamp="1588367642271" />
+    <state width="1334" height="270" key="GridCell.Tab.1.right" timestamp="1588367642272">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state width="1334" height="270" key="GridCell.Tab.1.right/0.23.1440.839@0.23.1440.839" timestamp="1588367642272" />
+    <state x="209" y="81" key="SettingsEditor" timestamp="1588291156540">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="209" y="81" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1588291156540" />
+    <state x="379" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1588536142832">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="379" y="275" key="com.intellij.ide.util.TipDialog/0.23.1440.839@0.23.1440.839" timestamp="1588536142832" />
+  </component>
+</project>
